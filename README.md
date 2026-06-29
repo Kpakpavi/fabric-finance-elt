@@ -41,3 +41,4 @@ Microsoft Fabric (Lakehouse, Copy job, dbt job, pipelines) · dbt · PostgreSQL 
 Python (FastAPI/uvicorn) · medallion / ELT · data-quality testing · Power BI.
 
 *All data is synthetic and safe to share publicly.*
+# fabric-finance-elt
