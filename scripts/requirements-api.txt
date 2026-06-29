@@ -1,0 +1,3 @@
+# Dependencies for the merchant REST API (scripts/merchant_api.py)
+fastapi>=0.110
+uvicorn[standard]>=0.29

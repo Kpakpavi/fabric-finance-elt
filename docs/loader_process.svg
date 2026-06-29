@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 620" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1b2d"/><stop offset="1" stop-color="#16243b"/>
+    </linearGradient>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#7aa7d6"/>
+    </marker>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1180" height="620" fill="url(#bg)"/>
+
+  <text x="40" y="50" fill="#fff" font-size="27" font-weight="700">Stage 1 setup — load the operational source into PostgreSQL</text>
+  <text x="40" y="80" fill="#9db4d0" font-size="16">scripts/load_operational_db.py  ·  full load + incremental merge  ·  this is the SOURCE your Copy job reads from</text>
+
+  <!-- CSV extracts -->
+  <text x="40" y="135" fill="#7aa7d6" font-size="13" font-weight="700" letter-spacing="1">CSV EXTRACTS (provided)</text>
+  <g filter="url(#sh)"><rect x="40" y="150" width="250" height="330" rx="14" fill="#1e2f49" stroke="#33507a"/></g>
+  <text x="60" y="180" fill="#9db4d0" font-size="13" font-weight="700">data/sources/operational-db/</text>
+  <g font-size="13.5" fill="#dce7f5">
+    <rect x="60" y="196" width="210" height="56" rx="8" fill="#26405f"/>
+    <text x="74" y="220">customers_full.csv</text><text x="74" y="240" fill="#9db4d0" font-size="12">2,015 rows · 15 dup keys</text>
+    <rect x="60" y="262" width="210" height="40" rx="8" fill="#26405f"/>
+    <text x="74" y="287">accounts_full.csv  · 3,951</text>
+    <rect x="60" y="318" width="210" height="56" rx="8" fill="#2f3b2a"/>
+    <text x="74" y="342">customers_delta.csv</text><text x="74" y="362" fill="#9db4d0" font-size="12">day-2: new + updated</text>
+    <rect x="60" y="384" width="210" height="40" rx="8" fill="#2f3b2a"/>
+    <text x="74" y="409">accounts_delta.csv  · 230</text>
+  </g>
+  <text x="60" y="452" fill="#7a93b2" font-size="12">watermark column:</text>
+  <text x="60" y="470" fill="#bcd0e8" font-size="12.5" font-weight="700">last_updated_at</text>
+
+  <!-- Loader script -->
+  <text x="350" y="135" fill="#7aa7d6" font-size="13" font-weight="700" letter-spacing="1">PYTHON LOADER</text>
+  <g filter="url(#sh)"><rect x="350" y="150" width="270" height="330" rx="14" fill="#10342a" stroke="#1c6e52"/></g>
+  <text x="485" y="186" fill="#7ee0b8" font-size="17" font-weight="700" text-anchor="middle">load_operational_db.py</text>
+
+  <rect x="372" y="210" width="226" height="118" rx="10" fill="#15463a"/>
+  <text x="388" y="234" fill="#bff0dc" font-size="14" font-weight="700">--full</text>
+  <text x="388" y="258" fill="#d7f3e7" font-size="12.5">create schema bank_core</text>
+  <text x="388" y="278" fill="#d7f3e7" font-size="12.5">create customers + accounts</text>
+  <text x="388" y="298" fill="#d7f3e7" font-size="12.5">bulk insert the snapshot</text>
+  <text x="388" y="318" fill="#9fd9c4" font-size="12">(customers loaded raw, dups kept)</text>
+
+  <rect x="372" y="338" width="226" height="124" rx="10" fill="#15463a"/>
+  <text x="388" y="362" fill="#bff0dc" font-size="14" font-weight="700">--incremental  (merge)</text>
+  <text x="388" y="386" fill="#d7f3e7" font-size="12.5">accounts → UPSERT</text>
+  <text x="402" y="404" fill="#9fd9c4" font-size="11.5">ON CONFLICT(account_id) DO UPDATE</text>
+  <text x="388" y="424" fill="#d7f3e7" font-size="12.5">customers → merge by key</text>
+  <text x="402" y="442" fill="#9fd9c4" font-size="11.5">delete matched + insert delta</text>
+
+  <!-- Postgres -->
+  <text x="680" y="135" fill="#7aa7d6" font-size="13" font-weight="700" letter-spacing="1">POSTGRESQL (source DB)</text>
+  <g filter="url(#sh)"><rect x="680" y="150" width="240" height="330" rx="14" fill="#1a2742" stroke="#3a5a8c"/></g>
+  <text x="800" y="184" fill="#9fc0ef" font-size="16" font-weight="700" text-anchor="middle">database: bank</text>
+  <text x="800" y="206" fill="#7fa6d8" font-size="13" text-anchor="middle">schema: bank_core</text>
+  <g>
+    <rect x="702" y="226" width="196" height="106" rx="10" fill="#24395f"/>
+    <text x="800" y="252" fill="#dce9fb" font-size="14.5" font-weight="700" text-anchor="middle">customers</text>
+    <text x="800" y="274" fill="#aac3e6" font-size="12" text-anchor="middle">no unique key</text>
+    <text x="800" y="292" fill="#aac3e6" font-size="12" text-anchor="middle">(dedupe later in silver)</text>
+    <text x="800" y="314" fill="#8fb0db" font-size="11.5" text-anchor="middle">8 columns incl. watermark</text>
+    <rect x="702" y="342" width="196" height="120" rx="10" fill="#24395f"/>
+    <text x="800" y="368" fill="#dce9fb" font-size="14.5" font-weight="700" text-anchor="middle">accounts</text>
+    <text x="800" y="390" fill="#aac3e6" font-size="12" text-anchor="middle">PRIMARY KEY (account_id)</text>
+    <text x="800" y="410" fill="#aac3e6" font-size="12" text-anchor="middle">FK → customer_id</text>
+    <text x="800" y="432" fill="#8fb0db" font-size="11.5" text-anchor="middle">enables clean upsert</text>
+  </g>
+
+  <!-- Next: Copy job -->
+  <text x="970" y="135" fill="#7aa7d6" font-size="13" font-weight="700" letter-spacing="1">YOU BUILD NEXT</text>
+  <g filter="url(#sh)"><rect x="970" y="150" width="170" height="330" rx="14" fill="#2a2742" stroke="#574f86"/></g>
+  <text x="1055" y="290" fill="#c7bdf0" font-size="16" font-weight="700" text-anchor="middle">Copy job</text>
+  <text x="1055" y="314" fill="#d9d2f7" font-size="12.5" text-anchor="middle">Postgres → Bronze</text>
+  <text x="1055" y="334" fill="#d9d2f7" font-size="12.5" text-anchor="middle">full + watermark</text>
+  <text x="1055" y="354" fill="#9b93c9" font-size="12" text-anchor="middle">(Stage 1 of the</text>
+  <text x="1055" y="372" fill="#9b93c9" font-size="12" text-anchor="middle">roadmap)</text>
+
+  <!-- arrows -->
+  <g stroke="#7aa7d6" stroke-width="2.5" fill="none">
+    <line x1="292" y1="300" x2="346" y2="300" marker-end="url(#ar)"/>
+    <line x1="622" y1="300" x2="676" y2="300" marker-end="url(#ar)"/>
+    <line x1="922" y1="300" x2="966" y2="300" marker-end="url(#ar)"/>
+  </g>
+
+  <text x="40" y="560" fill="#6f88a8" font-size="13">Run:  python scripts/load_operational_db.py --full     then later:  python scripts/load_operational_db.py --incremental</text>
+  <text x="40" y="584" fill="#48607c" font-size="12">Connection via PG* env vars or --dsn "postgresql://user:pass@host:5432/bank". Transactions (CSV) and merchants (JSON) are separate sources — not loaded here.</text>
+</svg>

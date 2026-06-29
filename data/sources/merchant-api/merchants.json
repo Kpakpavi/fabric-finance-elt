@@ -1,0 +1,1056 @@
+{
+  "count": 150,
+  "generated": "full_load",
+  "merchants": [
+    {
+      "merchant_id": "MER0001",
+      "merchant_name": "Electronics Co 1",
+      "category": "Electronics",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0002",
+      "merchant_name": "Healthcare Co 2",
+      "category": "Healthcare",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0003",
+      "merchant_name": "Electronics Co 3",
+      "category": "Electronics",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0004",
+      "merchant_name": "Travel Co 4",
+      "category": "Travel",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0005",
+      "merchant_name": "Travel Co 5",
+      "category": "Travel",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0006",
+      "merchant_name": "Dining Co 6",
+      "category": "Dining",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0007",
+      "merchant_name": "Online Co 7",
+      "category": "Online Services",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0008",
+      "merchant_name": "Dining Co 8",
+      "category": "Dining",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0009",
+      "merchant_name": "Cash Co 9",
+      "category": "Cash Withdrawal",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0010",
+      "merchant_name": "Dining Co 10",
+      "category": "Dining",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0011",
+      "merchant_name": "Electronics Co 11",
+      "category": "Electronics",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0012",
+      "merchant_name": "Electronics Co 12",
+      "category": "Electronics",
+      "country": "Australia",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0013",
+      "merchant_name": "Entertainment Co 13",
+      "category": "Entertainment",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0014",
+      "merchant_name": "Dining Co 14",
+      "category": "Dining",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0015",
+      "merchant_name": "Dining Co 15",
+      "category": "Dining",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0016",
+      "merchant_name": "Healthcare Co 16",
+      "category": "Healthcare",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0017",
+      "merchant_name": "Utilities Co 17",
+      "category": "Utilities",
+      "country": "canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0018",
+      "merchant_name": "Electronics Co 18",
+      "category": "Electronics",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0019",
+      "merchant_name": "Utilities Co 19",
+      "category": "Utilities",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0020",
+      "merchant_name": "Online Co 20",
+      "category": "Online Services",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0021",
+      "merchant_name": "Utilities Co 21",
+      "category": "Utilities",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0022",
+      "merchant_name": "Cash Co 22",
+      "category": "Cash Withdrawal",
+      "country": "Brazil",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0023",
+      "merchant_name": "Entertainment Co 23",
+      "category": "Entertainment",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0024",
+      "merchant_name": "Electronics Co 24",
+      "category": "Electronics",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0025",
+      "merchant_name": "Cash Co 25",
+      "category": "Cash Withdrawal",
+      "country": "Australia",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0026",
+      "merchant_name": "Entertainment Co 26",
+      "category": "Entertainment",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0027",
+      "merchant_name": "Dining Co 27",
+      "category": "Dining",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0028",
+      "merchant_name": "Electronics Co 28",
+      "category": "Electronics",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0029",
+      "merchant_name": "Cash Co 29",
+      "category": "Cash Withdrawal",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0030",
+      "merchant_name": "Dining Co 30",
+      "category": "Dining",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0031",
+      "merchant_name": "Fuel Co 31",
+      "category": "Fuel",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0032",
+      "merchant_name": "Dining Co 32",
+      "category": "Dining",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0033",
+      "merchant_name": "Cash Co 33",
+      "category": "Cash Withdrawal",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0034",
+      "merchant_name": "Electronics Co 34",
+      "category": "Electronics",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0035",
+      "merchant_name": "Dining Co 35",
+      "category": "Dining",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0036",
+      "merchant_name": "Entertainment Co 36",
+      "category": "Entertainment",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0037",
+      "merchant_name": "Healthcare Co 37",
+      "category": "Healthcare",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0038",
+      "merchant_name": "Entertainment Co 38",
+      "category": "Entertainment",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0039",
+      "merchant_name": "Healthcare Co 39",
+      "category": "Healthcare",
+      "country": "canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0040",
+      "merchant_name": "Cash Co 40",
+      "category": "Cash Withdrawal",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0041",
+      "merchant_name": "Utilities Co 41",
+      "category": "Utilities",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0042",
+      "merchant_name": "Entertainment Co 42",
+      "category": "Entertainment",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0043",
+      "merchant_name": "Healthcare Co 43",
+      "category": "Healthcare",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0044",
+      "merchant_name": "Online Co 44",
+      "category": "Online Services",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0045",
+      "merchant_name": "Cash Co 45",
+      "category": "Cash Withdrawal",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0046",
+      "merchant_name": "Entertainment Co 46",
+      "category": "Entertainment",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0047",
+      "merchant_name": "Travel Co 47",
+      "category": "Travel",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0048",
+      "merchant_name": "Fuel Co 48",
+      "category": "Fuel",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0049",
+      "merchant_name": "Dining Co 49",
+      "category": "Dining",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0050",
+      "merchant_name": "Entertainment Co 50",
+      "category": "Entertainment",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0051",
+      "merchant_name": "Electronics Co 51",
+      "category": "Electronics",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0052",
+      "merchant_name": "Fuel Co 52",
+      "category": "Fuel",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0053",
+      "merchant_name": "Entertainment Co 53",
+      "category": "Entertainment",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0054",
+      "merchant_name": "Healthcare Co 54",
+      "category": "Healthcare",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0055",
+      "merchant_name": "Healthcare Co 55",
+      "category": "Healthcare",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0056",
+      "merchant_name": "Online Co 56",
+      "category": "Online Services",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0057",
+      "merchant_name": "Electronics Co 57",
+      "category": "Electronics",
+      "country": "canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0058",
+      "merchant_name": "Dining Co 58",
+      "category": "Dining",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0059",
+      "merchant_name": "Utilities Co 59",
+      "category": "Utilities",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0060",
+      "merchant_name": "Entertainment Co 60",
+      "category": "Entertainment",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0061",
+      "merchant_name": "Cash Co 61",
+      "category": "Cash Withdrawal",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0062",
+      "merchant_name": "Utilities Co 62",
+      "category": "Utilities",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0063",
+      "merchant_name": "Healthcare Co 63",
+      "category": "Healthcare",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0064",
+      "merchant_name": "Travel Co 64",
+      "category": "Travel",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0065",
+      "merchant_name": "Fuel Co 65",
+      "category": "Fuel",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0066",
+      "merchant_name": "Dining Co 66",
+      "category": "Dining",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0067",
+      "merchant_name": "Healthcare Co 67",
+      "category": "Healthcare",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0068",
+      "merchant_name": "Dining Co 68",
+      "category": "Dining",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0069",
+      "merchant_name": "Entertainment Co 69",
+      "category": "Entertainment",
+      "country": "canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0070",
+      "merchant_name": "Online Co 70",
+      "category": "Online Services",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0071",
+      "merchant_name": "Dining Co 71",
+      "category": "Dining",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0072",
+      "merchant_name": "Entertainment Co 72",
+      "category": "Entertainment",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0073",
+      "merchant_name": "Entertainment Co 73",
+      "category": "Entertainment",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0074",
+      "merchant_name": "Utilities Co 74",
+      "category": "Utilities",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0075",
+      "merchant_name": "Cash Co 75",
+      "category": "Cash Withdrawal",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0076",
+      "merchant_name": "Cash Co 76",
+      "category": "Cash Withdrawal",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0077",
+      "merchant_name": "Entertainment Co 77",
+      "category": "Entertainment",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0078",
+      "merchant_name": "Healthcare Co 78",
+      "category": "Healthcare",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0079",
+      "merchant_name": "Online Co 79",
+      "category": "Online Services",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0080",
+      "merchant_name": "Travel Co 80",
+      "category": "Travel",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0081",
+      "merchant_name": "Online Co 81",
+      "category": "Online Services",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0082",
+      "merchant_name": "Fuel Co 82",
+      "category": "Fuel",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0083",
+      "merchant_name": "Groceries Co 83",
+      "category": "Groceries",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0084",
+      "merchant_name": "Groceries Co 84",
+      "category": "Groceries",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0085",
+      "merchant_name": "Dining Co 85",
+      "category": "Dining",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0086",
+      "merchant_name": "Electronics Co 86",
+      "category": "Electronics",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0087",
+      "merchant_name": "Groceries Co 87",
+      "category": "Groceries",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0088",
+      "merchant_name": "Electronics Co 88",
+      "category": "Electronics",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0089",
+      "merchant_name": "Travel Co 89",
+      "category": "Travel",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0090",
+      "merchant_name": "Online Co 90",
+      "category": "Online Services",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0091",
+      "merchant_name": "Fuel Co 91",
+      "category": "Fuel",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0092",
+      "merchant_name": "Online Co 92",
+      "category": "Online Services",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0093",
+      "merchant_name": "Entertainment Co 93",
+      "category": "Entertainment",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0094",
+      "merchant_name": "Cash Co 94",
+      "category": "Cash Withdrawal",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0095",
+      "merchant_name": "Travel Co 95",
+      "category": "Travel",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0096",
+      "merchant_name": "Travel Co 96",
+      "category": "Travel",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0097",
+      "merchant_name": "Entertainment Co 97",
+      "category": "Entertainment",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0098",
+      "merchant_name": "Cash Co 98",
+      "category": "Cash Withdrawal",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0099",
+      "merchant_name": "Fuel Co 99",
+      "category": "Fuel",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0100",
+      "merchant_name": "Electronics Co 100",
+      "category": "Electronics",
+      "country": "canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0101",
+      "merchant_name": "Utilities Co 101",
+      "category": "Utilities",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0102",
+      "merchant_name": "Cash Co 102",
+      "category": "Cash Withdrawal",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0103",
+      "merchant_name": "Entertainment Co 103",
+      "category": "Entertainment",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0104",
+      "merchant_name": "Healthcare Co 104",
+      "category": "Healthcare",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0105",
+      "merchant_name": "Dining Co 105",
+      "category": "Dining",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0106",
+      "merchant_name": "Cash Co 106",
+      "category": "Cash Withdrawal",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0107",
+      "merchant_name": "Fuel Co 107",
+      "category": "Fuel",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0108",
+      "merchant_name": "Cash Co 108",
+      "category": "Cash Withdrawal",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0109",
+      "merchant_name": "Groceries Co 109",
+      "category": "Groceries",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0110",
+      "merchant_name": "Entertainment Co 110",
+      "category": "Entertainment",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0111",
+      "merchant_name": "Online Co 111",
+      "category": "Online Services",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0112",
+      "merchant_name": "Travel Co 112",
+      "category": "Travel",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0113",
+      "merchant_name": "Entertainment Co 113",
+      "category": "Entertainment",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0114",
+      "merchant_name": "Utilities Co 114",
+      "category": "Utilities",
+      "country": "Brazil",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0115",
+      "merchant_name": "Travel Co 115",
+      "category": "Travel",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0116",
+      "merchant_name": "Fuel Co 116",
+      "category": "Fuel",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0117",
+      "merchant_name": "Entertainment Co 117",
+      "category": "Entertainment",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0118",
+      "merchant_name": "Dining Co 118",
+      "category": "Dining",
+      "country": "canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0119",
+      "merchant_name": "Dining Co 119",
+      "category": "Dining",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0120",
+      "merchant_name": "Groceries Co 120",
+      "category": "Groceries",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0121",
+      "merchant_name": "Entertainment Co 121",
+      "category": "Entertainment",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0122",
+      "merchant_name": "Electronics Co 122",
+      "category": "Electronics",
+      "country": "Nigeria",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0123",
+      "merchant_name": "Cash Co 123",
+      "category": "Cash Withdrawal",
+      "country": "USA",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0124",
+      "merchant_name": "Travel Co 124",
+      "category": "Travel",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0125",
+      "merchant_name": "Dining Co 125",
+      "category": "Dining",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0126",
+      "merchant_name": "Cash Co 126",
+      "category": "Cash Withdrawal",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0127",
+      "merchant_name": "Travel Co 127",
+      "category": "Travel",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0128",
+      "merchant_name": "Dining Co 128",
+      "category": "Dining",
+      "country": " germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0129",
+      "merchant_name": "Utilities Co 129",
+      "category": "Utilities",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0130",
+      "merchant_name": "Dining Co 130",
+      "category": "Dining",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0131",
+      "merchant_name": "Entertainment Co 131",
+      "category": "Entertainment",
+      "country": "Japan",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0132",
+      "merchant_name": "Dining Co 132",
+      "category": "Dining",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0133",
+      "merchant_name": "Online Co 133",
+      "category": "Online Services",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0134",
+      "merchant_name": "Utilities Co 134",
+      "category": "Utilities",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0135",
+      "merchant_name": "Cash Co 135",
+      "category": "Cash Withdrawal",
+      "country": "France",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0136",
+      "merchant_name": "Travel Co 136",
+      "category": "Travel",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0137",
+      "merchant_name": "Travel Co 137",
+      "category": "Travel",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0138",
+      "merchant_name": "Fuel Co 138",
+      "category": "Fuel",
+      "country": "Germany",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0139",
+      "merchant_name": "Groceries Co 139",
+      "category": "Groceries",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0140",
+      "merchant_name": "Utilities Co 140",
+      "category": "Utilities",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0141",
+      "merchant_name": "Travel Co 141",
+      "category": "Travel",
+      "country": "India",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0142",
+      "merchant_name": "Groceries Co 142",
+      "category": "Groceries",
+      "country": "Canada",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0143",
+      "merchant_name": "Cash Co 143",
+      "category": "Cash Withdrawal",
+      "country": " United States ",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0144",
+      "merchant_name": "Groceries Co 144",
+      "category": "Groceries",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0145",
+      "merchant_name": "Utilities Co 145",
+      "category": "Utilities",
+      "country": "United Kingdom",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0146",
+      "merchant_name": "Groceries Co 146",
+      "category": "Groceries",
+      "country": "uk",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0147",
+      "merchant_name": "Online Co 147",
+      "category": "Online Services",
+      "country": "india",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0148",
+      "merchant_name": "Entertainment Co 148",
+      "category": "Entertainment",
+      "country": "UK",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0149",
+      "merchant_name": "Entertainment Co 149",
+      "category": "Entertainment",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    },
+    {
+      "merchant_id": "MER0150",
+      "merchant_name": "Travel Co 150",
+      "category": "Travel",
+      "country": "usa",
+      "last_updated_at": "2025-06-30 23:59:59"
+    }
+  ]
+}

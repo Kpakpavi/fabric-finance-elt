@@ -1,0 +1,16 @@
+# secrets / local config
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# stale SQLite source carriers (replaced by CSV extracts)
+data/sources/operational-db/*.db
+data/sources/operational-db/*.db-journal
+
+# dbt (when you add it)
+target/
+dbt_packages/
+logs/

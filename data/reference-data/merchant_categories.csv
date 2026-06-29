@@ -1,0 +1,11 @@
+category,category_group,is_high_risk
+Groceries,Essential,0
+Utilities,Essential,0
+Healthcare,Essential,0
+Fuel,Essential,0
+Dining,Lifestyle,0
+Entertainment,Lifestyle,0
+Travel,Lifestyle,0
+Electronics,Retail,0
+Online Services,Digital,1
+Cash Withdrawal,Cash,1
