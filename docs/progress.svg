@@ -24,7 +24,7 @@
   <g filter="url(#sh)"><rect x="40" y="206" width="370" height="250" rx="14" fill="#10342a" stroke="#1c6e52"/></g>
   <g font-size="14.5">
     <circle cx="68" cy="250" r="9" fill="#2ecc8f"/><text x="64.5" y="255" font-size="12" fill="#06241a">✓</text>
-    <text x="88" y="248" fill="#d7f3e7" font-weight="700">Operational DB — PostgreSQL</text>
+    <text x="88" y="248" fill="#d7f3e7" font-weight="700">Operational DB — SQL Server</text>
     <text x="88" y="268" fill="#9fd9c4" font-size="12.5">bank_core.customers + accounts (loaded)</text>
 
     <circle cx="68" cy="318" r="9" fill="#2ecc8f"/><text x="64.5" y="323" font-size="12" fill="#06241a">✓</text>
@@ -44,7 +44,7 @@
   <g font-size="13.5" fill="#ddd6f7">
     <text x="60" y="582">Copy job each source into a Lakehouse</text>
     <text x="60" y="604">"bronze" zone, raw + audit columns.</text>
-    <text x="60" y="636" fill="#b3a9e0">• Postgres → bronze customers / accounts</text>
+    <text x="60" y="636" fill="#b3a9e0">• SQL Server → bronze customers / accounts</text>
     <text x="60" y="658" fill="#b3a9e0">• CSV files → bronze transactions</text>
     <text x="60" y="680" fill="#b3a9e0">• REST API → bronze merchants</text>
     <text x="60" y="712" fill="#7ee0b8" font-size="12.5">✓ Lakehouse + reference files uploaded</text>
@@ -60,7 +60,7 @@
   <g font-size="15">
     <circle cx="486" cy="246" r="11" fill="#2ecc8f"/><text x="481" y="251" font-size="13" fill="#06241a">✓</text>
     <text x="512" y="251" fill="#cfe6da" font-weight="700">Stage 0 — Setup</text>
-    <text x="980" y="251" fill="#7ee0b8" font-size="12.5">done · workspace · .env · Postgres</text>
+    <text x="980" y="251" fill="#7ee0b8" font-size="12.5">done · workspace · .env · SQL Server</text>
 
     <!-- Stage 1 current -->
     <rect x="466" y="276" width="778" height="40" rx="9" fill="#332e57"/>

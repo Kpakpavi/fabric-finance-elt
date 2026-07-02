@@ -12,7 +12,7 @@ duplicate keys, a few orphan foreign keys). Cleaning it is the job.
 ```
 data/
 ├── sources/
-│   ├── operational-db/      ← Source 1: a relational database (PostgreSQL)
+│   ├── operational-db/      ← Source 1: a relational database (SQL Server)
 │   │   ├── customers_full.csv  + accounts_full.csv    (full snapshot)
 │   │   └── customers_delta.csv + accounts_delta.csv   (day-2 changes)
 │   ├── cards-system/        ← Source 2: file extracts from the cards platform
@@ -28,24 +28,24 @@ data/
 
 ---
 
-## Source 1 — Operational database (PostgreSQL)  ·  `sources/operational-db/`
+## Source 1 — Operational database (SQL Server)  ·  `sources/operational-db/`
 
 This is your bank's operational system. The data ships as **CSV extracts** that
-you load into **PostgreSQL** with the provided script — Postgres then *is* the
+you load into **SQL Server** with the provided script — SQL Server then *is* the
 source system your Copy job ingests from.
 
 **Load it (one-time setup):**
 
-```bash
-pip install psycopg2-binary
-export PGHOST=localhost PGPORT=5432 PGDATABASE=bank PGUSER=postgres PGPASSWORD=postgres
+```powershell
+uv pip install -r scripts/requirements.txt
+# Edit .env with your connection details (see GETTING_STARTED.md)
 python scripts/load_operational_db.py --full          # creates schema bank_core + loads snapshot
 python scripts/load_operational_db.py --incremental   # later: applies the day-2 changes (merge)
 ```
 
 This creates schema `bank_core` with tables **customers** and **accounts**.
 
-- **Maps to in Fabric:** a Copy job with the **PostgreSQL** connector. Point it at
+- **Maps to in Fabric:** a Copy job with the **SQL Server** connector. Point it at
   `bank_core.customers` / `bank_core.accounts`.
 - **Incremental:** the `--incremental` run applies ~120 new customers, ~40 profile
   updates, ~80 new accounts and ~150 account updates — all carrying a fresh
@@ -53,10 +53,6 @@ This creates schema `bank_core` with tables **customers** and **accounts**.
 - **Why it's loaded "raw":** `customers` keeps its ~15 duplicate `customer_id`s on
   purpose (no unique key) so you have a real dedupe job in Stage 3; `accounts`
   has a primary key on `account_id`.
-
-> Note: earlier `.db` files (SQLite) may still be sitting in this folder from an
-> earlier step — they're not used anymore. Delete `bank_core.db`,
-> `bank_core.db-journal`, and `bank_core_changes.db` to avoid confusion.
 
 **customers**: `customer_id` (key — has duplicates in the raw snapshot!),
 `first_name`, `last_name`, `email` (padded/mixed case), `country` (messy free
@@ -110,9 +106,9 @@ Small, clean, slow-changing lookups. Load these with `dbt seed`, not a Copy job.
 
 ## How the two loads fit together
 
-1. **Initial (full) load** — Postgres `bank_core` (via the loader),
+1. **Initial (full) load** — SQL Server `bank_core` (via the loader),
    `transactions_full.csv`, `merchants.json` → land everything into bronze.
-2. **Incremental load** — Postgres day-2 changes (loader `--incremental`),
+2. **Incremental load** — SQL Server day-2 changes (loader `--incremental`),
    `transactions_delta.csv` → bring in only what changed since
    `max(last_updated_at)` and **merge** it.
 

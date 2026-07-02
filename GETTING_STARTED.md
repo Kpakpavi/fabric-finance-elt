@@ -1,88 +1,79 @@
 # Getting started — run the loader
 
-Everything you need to load the operational data into PostgreSQL, using **uv**
-for the Python side. Do these once, top to bottom.
-
-> Note: `uvicorn` is a web server and isn't used here. The tool you want is
-> **uv** (Astral's package/environment manager).
+Everything you need to load the operational data into SQL Server (browsed via SSMS),
+using **uv** for the Python side. Do these once, top to bottom.
 
 ---
 
 ## 0. Prerequisites
 
 - **uv** — install it if you don't have it:
-  ```bash
-  brew install uv          # or:  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```powershell
+  powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
   uv --version
   ```
-- **PostgreSQL** running with a database called `bank` (Step 1).
-- A terminal opened **in this folder** (`Fabric_Finance`).
+- **SQL Server** running locally. SQL Server Express is free and sufficient.
+  Download: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+- **SSMS** (SQL Server Management Studio) to browse and verify the data.
+  Download: https://aka.ms/ssmsfullsetup
+- **ODBC Driver 17 (or 18) for SQL Server** installed on this machine.
+  Download: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server
+- A terminal opened **in this folder** (`fabric-finance-elt`).
 
 ---
 
-## 1. Get PostgreSQL running
+## 1. Create the target database in SSMS
 
-> Already have Postgres running (you do — the `SQL` database on `localhost:5432`)?
-> **Skip to Step 2.** The options below are only for setting it up from scratch.
+Open SSMS and connect to your local instance (e.g. `localhost` or `.\SQLEXPRESS`).
+Run this in a New Query window:
 
-Pick ONE option.
-
-### Option A — Docker (easiest; matches the script's defaults exactly)
-```bash
-docker run --name bank-pg \
-  -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=bank \
-  -p 5432:5432 -d postgres:16
+```sql
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'bank')
+    CREATE DATABASE bank;
 ```
-This gives you host `localhost`, port `5432`, db `bank`, user `postgres`,
-password `postgres` — which is exactly what the script assumes, so you won't
-need any extra config. (Start it again later with `docker start bank-pg`.)
 
-### Option B — Homebrew (native install)
-```bash
-brew install postgresql@16
-brew services start postgresql@16
-createdb bank
-```
-With Homebrew the superuser is your macOS username (no password), so you'll pass
-a DSN when you run the script — see the note in Step 4.
-
-**Check it's up:**
-```bash
-pg_isready -h localhost -p 5432    # should say "accepting connections"
-```
+The loader will create the `bank_core` schema and both tables automatically on first run.
 
 ---
 
 ## 2. Set up the Python environment with uv
 
-From the `Fabric_Finance` folder:
+From the `fabric-finance-elt` folder (PowerShell):
 
-```bash
-uv venv                                  # creates .venv/
-source .venv/bin/activate                # activate it
+```powershell
+uv venv
+.venv\Scripts\Activate.ps1
 uv pip install -r scripts/requirements.txt
 ```
 
-You should now see `(.venv)` in your prompt and `psycopg2` installed.
+You should now see `(.venv)` in your prompt and `pyodbc` installed.
 
 ---
 
 ## 3. Tell the script how to connect — via `.env`
 
-A `.env` file already exists at the project root with your settings:
+A `.env` file already exists at the project root. The default uses **Windows
+Authentication**, which works out of the box for a local SQL Server:
 
 ```
-PGHOST=localhost
-PGPORT=5432
-PGDATABASE=SQL
-PGUSER=postgres
-PGPASSWORD=CHANGE_ME      ← put your real Postgres password here
-PGSCHEMA=bank_core        ← the loader creates/uses this schema inside SQL
+MSSQL_SERVER=localhost
+MSSQL_DATABASE=bank
+MSSQL_SCHEMA=bank_core
+MSSQL_TRUSTED_CONNECTION=yes
 ```
 
-**Edit `.env` and replace `CHANGE_ME` with your password.** That's the only thing
-you have to change. The script auto-loads this file — no exporting needed.
+If you're using **SQL Server Authentication** (sa login or a named user), switch to:
+
+```
+MSSQL_SERVER=localhost
+MSSQL_DATABASE=bank
+MSSQL_USERNAME=sa
+MSSQL_PASSWORD=your_password_here
+MSSQL_SCHEMA=bank_core
+MSSQL_TRUSTED_CONNECTION=no
+```
+
+The script auto-loads this file — no exporting needed.
 
 (`.env` is git-ignored so your password never gets committed. `.env.example` is
 the shareable template.)
@@ -91,7 +82,7 @@ the shareable template.)
 
 ## 4. Run the full load
 
-```bash
+```powershell
 python scripts/load_operational_db.py --full
 ```
 
@@ -106,19 +97,17 @@ FULL LOAD into schema 'bank_core':
 
 ## 5. Verify it landed
 
-Open a SQL prompt (or just browse it in DataGrip):
-```bash
-psql "postgresql://postgres:YOUR_PASSWORD@localhost:5432/SQL"
-```
-Then:
+In SSMS, open a New Query window on the `bank` database and run:
+
 ```sql
-\dt bank_core.*
-SELECT count(*) FROM bank_core.customers;   -- 2015
-SELECT count(*) FROM bank_core.accounts;    -- 3951
+SELECT COUNT(*) FROM bank_core.customers;   -- 2015
+SELECT COUNT(*) FROM bank_core.accounts;    -- 3951
+
 -- proof the messiness is intact (for your Stage 3 dedupe):
-SELECT customer_id, count(*) FROM bank_core.customers
-GROUP BY customer_id HAVING count(*) > 1;   -- ~15 duplicate ids
-\q
+SELECT customer_id, COUNT(*) AS cnt
+FROM bank_core.customers
+GROUP BY customer_id
+HAVING COUNT(*) > 1;   -- ~15 duplicate ids
 ```
 
 ---
@@ -126,20 +115,27 @@ GROUP BY customer_id HAVING count(*) > 1;   -- ~15 duplicate ids
 ## 6. Later — run the incremental (day-2) merge
 
 When you want to simulate the source system changing over time:
-```bash
+
+```powershell
 python scripts/load_operational_db.py --incremental
 ```
+
 Expected:
 ```
 INCREMENTAL LOAD (merge) into schema 'bank_core':
   customers: 160 delta rows merged (42 existing matched & replaced, rest inserted)
   accounts : 230 delta rows upserted (insert or update on account_id)
 ```
+
 Verify the merge actually updated an existing account (no duplicate created):
+
 ```sql
-SELECT count(*) FROM bank_core.accounts;  -- ~4031 now
-SELECT account_id, count(*) FROM bank_core.accounts
-GROUP BY account_id HAVING count(*) > 1;  -- 0 rows
+SELECT COUNT(*) FROM bank_core.accounts;  -- ~4031 now
+
+SELECT account_id, COUNT(*) AS cnt
+FROM bank_core.accounts
+GROUP BY account_id
+HAVING COUNT(*) > 1;  -- 0 rows
 ```
 
 ---
@@ -148,15 +144,16 @@ GROUP BY account_id HAVING count(*) > 1;  -- 0 rows
 
 | Symptom | Fix |
 |---|---|
-| `psycopg2 not installed` | Activate the venv (`source .venv/bin/activate`) and re-run Step 2. |
-| `could not connect to server` / `Connection refused` | Postgres isn't running. Re-check Step 1 (`pg_isready`, `docker start bank-pg`). |
-| `password authentication failed` | Wrong password in `.env` — fix `PGPASSWORD`. |
-| `database "SQL" does not exist` | Check `PGDATABASE` in `.env` matches your actual database name. |
-| `Source file not found` | Run from the `Fabric_Finance` folder so `data/sources/...` resolves. |
+| `pyodbc not installed` | Activate the venv (`.venv\Scripts\Activate.ps1`) and re-run Step 2. |
+| `Connection failed` / `Login failed for user` | Check `MSSQL_USERNAME` / `MSSQL_PASSWORD` in `.env`, or switch to `MSSQL_TRUSTED_CONNECTION=yes`. |
+| `[IM002] Data source name not found` | Install the ODBC Driver 17 for SQL Server (see Prerequisites). |
+| `Cannot open database "bank"` | Create the `bank` database in SSMS first (Step 1). |
+| `Schema 'bank_core' not initialised` | Run `--full` before `--incremental`. |
+| `Source file not found` | Run from the `fabric-finance-elt` folder so `data/sources/...` resolves. |
 
 ---
 
 ## What's next
 With `bank_core` populated, you're ready for **Stage 1**: build the Copy job that
-ingests `bank_core.customers` / `bank_core.accounts` from Postgres into your
+ingests `bank_core.customers` / `bank_core.accounts` from SQL Server into your
 bronze layer. See `ROADMAP.md`.

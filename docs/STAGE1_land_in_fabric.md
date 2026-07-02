@@ -4,7 +4,7 @@
 audit columns — ready for the dbt job.
 
 **Why this version:** the on-premises data gateway is **Windows-only**, so on a
-Mac we skip it. Instead of pulling live from local Postgres/API, we **upload the
+Mac we skip it. Instead of pulling live from local SQL Server/API, we **upload the
 source files to OneLake** and use **Copy jobs (Files → tables)** to build bronze.
 You still use Fabric Copy jobs and the full medallion flow — you just don't pull
 from the live database.
@@ -16,7 +16,7 @@ Source files (already on disk) ──upload──▶ Lakehouse Files ──Copy 
   merchant-api/merchants.json
 ```
 
-> Postgres stays your *local* source system (you loaded it earlier, and you can
+> SQL Server stays your *local* source system (you loaded it earlier, and you can
 > still use it for a local dbt prototype). For the **Fabric** path we land its
 > CSV extracts — same data, no gateway needed.
 
@@ -78,8 +78,9 @@ project when you're ready.
 
 ---
 
-### If you later want the *live* Postgres → Fabric Copy job
-You'd need the source reachable from the cloud (no gateway on Mac): host Postgres
-on a free cloud tier (Neon / Supabase / Azure Database for PostgreSQL) and re-run
-the loader with that host in `.env`. Then a Copy job's PostgreSQL connector
-reaches it directly. Optional — the file path above is enough for the project.
+### If you later want the *live* SQL Server → Fabric Copy job
+You'd need the source reachable from the cloud: use the **on-premises data
+gateway** (Windows only) to expose your local SQL Server, or move the database
+to Azure SQL and re-run the loader with that host in `.env`. Then a Copy job's
+SQL Server connector reaches it directly. Optional — the file path above is
+enough for the project.
